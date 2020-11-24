@@ -1,0 +1,15 @@
+FUNCTION dot_product(v1,v2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i, dot : INTEGER;
+BEGIN
+    dot := 0;
+    i := 0;
+    IF (v1.length <> v2.length) THEN
+        Write("On ne peut pas multiplier deux vecteurs de differentes tailles");
+        RETURN NaN; // NaN : Impossible
+    END_IF
+    WHILE (i <v1.length ) DO
+        dot := dot + v1[i]*v2[i];
+    END_WHILE
+    RETURN dot ;
+END
